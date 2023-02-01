@@ -1,10 +1,8 @@
 
-// Get the current date and time
-let now = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+$(document).ready(function () {
+    // Get current hour using moment.js
+    let currentHour = moment().hours();
 
-// Display the current day at the top of the calendar
-$("#currentDay").text("Today is " + now);
-
-// Time blocks for standard business hours (9am to 5pm)
-let businessHours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
-
+    // Display current day at the top of the calender
+    $("#currentDay").text(moment().format("dddd, MMMM Do"));
+}
